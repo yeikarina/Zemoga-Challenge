@@ -1,0 +1,368 @@
+@charset "UTF-8";
+.previousRulings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.previousRulings-title {
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.previousRulings .cardsView {
+  display: none;
+  height: 28px;
+  width: 131px;
+  border-radius: 0px;
+  text-align-last: center;
+}
+
+.polling-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.polling-cards .cardGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  position: relative;
+  width: 80vw;
+  min-width: 300px;
+  min-height: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFFFFF;
+  background-image: url("../assets/img/kanye.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 12px;
+  margin-bottom: 21px;
+}
+
+.polling-cards .cardGrid-gradient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%);
+  height: 72%;
+}
+
+.polling-cards .cardGrid-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+
+.polling-cards .cardGrid-title .name {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.polling-cards .cardGrid-desc {
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: justify;
+  height: 36px;
+  width: 79.5%;
+  margin: 7px auto 0 auto;
+}
+
+.polling-cards .cardGrid-date {
+  margin: 12px 36px 12px auto;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.list-cards {
+  overflow-x: visible;
+  overflow-y: visible;
+  position: relative;
+}
+
+.list-cards .cardList {
+  width: 100%;
+  height: 18.4vw;
+  background-image: url("../assets/img/kanye.png");
+  background-repeat: no-repeat;
+  background-size: 20.7%;
+  background-position-y: -10px;
+  color: #FFFFFF;
+}
+
+.list-cards .cardList-gradient {
+  position: relative;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  padding-right: 2%;
+  -ms-grid-columns: 71.6% auto;
+      grid-template-columns: 71.6% auto;
+  -ms-grid-rows: 30px auto;
+      grid-template-rows: 30px auto;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), color-stop(19.79%, #888888), color-stop(50%, #666666), color-stop(71.88%, rgba(51, 51, 51, 0.6)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 19.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
+}
+
+.list-cards .cardList-title {
+  margin-left: 28.9%;
+}
+
+.list-cards .cardList-title .listCard-thumb {
+  position: absolute;
+  left: 0px;
+}
+
+.list-cards .cardList-title .name {
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.list-cards .cardList-desc {
+  overflow: hidden;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  margin: 1em 1em 0 28.9%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 34px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.list-cards .cardList-date {
+  padding-top: 1em;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: right;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.list-cards .cardList .voting {
+  padding-top: 1em;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.list-cards .cardList .voting div:last-child {
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.list-cards .cardList .voting .voteNow {
+  width: 50%;
+}
+
+.list-cards .cardList .voting > div {
+  margin-top: 4px;
+  margin-right: 5%;
+  margin-left: 0;
+}
+
+.list-cards .cardList .gaugeBar {
+  position: absolute;
+  top: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.list-cards .gaugeBar, .polling-cards .gaugeBar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 36px;
+}
+
+.list-cards .gaugeBar-up, .polling-cards .gaugeBar-up {
+  width: 20%;
+  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
+  background-color: rgba(60, 187, 180, 0.6);
+}
+
+.list-cards .gaugeBar-up div.thumbButton, .polling-cards .gaugeBar-up div.thumbButton {
+  background-color: transparent;
+}
+
+.list-cards .gaugeBar-down, .polling-cards .gaugeBar-down {
+  width: 80%;
+  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: rgba(249, 173, 29, 0.6);
+}
+
+.list-cards .gaugeBar-down div.thumbButton, .polling-cards .gaugeBar-down div.thumbButton {
+  background-color: transparent;
+}
+
+.list-cards .voting, .polling-cards .voting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.list-cards .voting div:last-child, .polling-cards .voting div:last-child {
+  margin-right: 34px;
+}
+
+.list-cards .voting > div, .polling-cards .voting > div {
+  margin-left: 12px;
+}
+
+.list-cards .voteNow, .polling-cards .voteNow {
+  width: 107px;
+  height: 38px;
+  font-family: Lato;
+  font-size: 15px;
+  line-height: 36px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.list-cards .thumbUp, .polling-cards .thumbUp {
+  background-color: rgba(60, 187, 180, 0.8);
+}
+
+.list-cards .thumbDown, .polling-cards .thumbDown {
+  background-color: #fbbd4a;
+}
+
+.list-cards .thumbButton, .polling-cards .thumbButton {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.list-cards .thumbButton-icon, .polling-cards .thumbButton-icon {
+  position: relative;
+  width: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .previousRulings .cardsView {
+    display: inline-block;
+  }
+  .polling-cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    justify-items: flex-start;
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+  .polling-cards .cardGrid {
+    width: 48%;
+    height: 45vw;
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

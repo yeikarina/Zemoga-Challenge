@@ -1,0 +1,274 @@
+@function emTopx($fontSize, $em){
+    @return $fontSize * $em;
+}
+
+@function pxToem($fontSize, $px){
+    @return $px / $fontSize;
+}
+.previousRulings{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    &-title{
+        font-family: Lato;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .cardsView{
+        display: none;
+        height: 28px;
+        width: 131px;
+        border-radius: 0px;
+        text-align-last: center;
+    }
+}
+
+.grid-cards{    
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .cardGrid{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        align-content: flex-end;
+        position: relative;
+        width: 80vw;
+        min-width: 300px;
+        min-height: 300px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        background-image: url('../assets/img/kanye.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 12px;
+        margin-bottom: 21px;
+        &-gradient{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-end;
+            align-content: flex-end;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%);
+            height: 72%;
+        }
+        &-title{
+            display: flex;
+            align-items: flex-end;
+            height: fit-content;
+            width: 100%;
+            .name{
+                margin: 0;
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 28px;
+                color: #FFFFFF;
+            }
+        }
+
+        &-desc{
+            text-align: center;
+            overflow: hidden;    
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: justify;
+            height: emTopx(18px, 2);
+            width: 79.5%;
+            margin: 7px auto 0 auto;
+
+        }
+        &-date{
+            margin: 12px 36px 12px auto;
+            font-family: Lato;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 0px;
+            text-align: right;
+
+        }
+    }
+}
+
+.list-cards{    
+    overflow-x: visible;
+    overflow-y: visible;
+    .cardList{
+        width: 100%;
+        //height: 142px;
+        height: 18.4vw;
+        background-image: url('../assets/img/kanye.png');
+        background-repeat: no-repeat;
+        background-size: 20.7%;
+        background-position-y: -10px;
+        color: #FFFFFF;
+        &-gradient{
+            position: relative;
+            height: 100%;
+            display: grid;
+            padding-right: 2%;
+            grid-template-columns: 71.6% auto;
+            grid-template-rows: 30px auto;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 19.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
+
+        }
+        &-title{ 
+            margin-left: 28.9%;               
+            .listCard-thumb{
+                position: absolute;
+                left: 0px;
+            }
+            .name{
+                margin: 0;
+                color: #FFFFFF;
+            }
+        }
+        &-desc{          
+            overflow: hidden;  font-family: Lato;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            text-align: left;
+            margin: 1em 1em 0 28.9%;
+            box-sizing: border-box;
+            height: 34px;
+            grid-column: 1 / 2;
+        }
+        &-date{
+            padding-top: 1em;
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 14px;
+            text-align: right;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        .voting{
+            padding-top: 1em;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            align-items: flex-start;
+            box-sizing: border-box;
+            div:last-child{
+                margin-top: 0;
+                margin-right: 0;
+            }      
+            .voteNow{
+                width: 50%;
+            }  
+        }
+        .voting > div{
+            margin-top: 4px;
+            margin-right: 5%;
+            margin-left: 0;
+        }
+        .gaugeBar{
+            position:absolute;
+            top: 100%;
+            transform: translateY(-100%);
+        }
+    }
+}
+
+.polling-cards{ 
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .thumbUp{        
+        background-color: rgba(60, 187, 180, 0.8);
+    }
+    .thumbDown{        
+        background-color: rgba(251, 189, 74, 1);
+    }
+    .thumbButton{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        text-align: center;
+        &-icon{
+            position: relative;
+            width: 16px;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    }
+    
+    .voting{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 12px;
+        width: 100%;
+        div:last-child{
+            margin-right: 34px;
+        }     
+        
+        & > div{
+            margin-left: 12px;
+        }
+        
+        .voteNow{
+            width: 107px;
+            height: 38px;
+            font-family: Lato;
+            font-size: 15px;
+            line-height: 36px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+        }
+    }
+
+    .gaugeBar{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 36px;
+        &-up{
+            width: 20%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
+            background-color: rgba(60, 187, 180, 0.6);
+            div.thumbButton{
+                background-color:transparent;
+            }
+        }
+        &-down{
+            width: 80%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            background-color: rgba(249, 173, 29, 0.6);
+            div.thumbButton{
+                background-color:transparent;
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) {
+    .previousRulings{
+        .cardsView{
+            display: inline-block;
+        }
+    }
+    .polling-cards{
+        flex-wrap: wrap;      
+        justify-content: space-between;  
+        justify-items: flex-start;
+        overflow-x: visible;
+        .cardGrid{
+            width: 48%;
+            height: 45vw;
+            margin-right: 0;
+        }
+    }
+}
