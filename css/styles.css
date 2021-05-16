@@ -27,18 +27,12 @@
   text-align-last: center;
 }
 
-.polling-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: auto;
+.grid-cards {
   overflow-x: scroll;
   overflow-y: hidden;
-  position: relative;
 }
 
-.polling-cards .cardGrid {
+.grid-cards .cardGrid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +59,7 @@
   margin-bottom: 21px;
 }
 
-.polling-cards .cardGrid-gradient {
+.grid-cards .cardGrid-gradient {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +77,7 @@
   height: 72%;
 }
 
-.polling-cards .cardGrid-title {
+.grid-cards .cardGrid-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +90,7 @@
   width: 100%;
 }
 
-.polling-cards .cardGrid-title .name {
+.grid-cards .cardGrid-title .name {
   margin: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -105,7 +99,7 @@
   color: #FFFFFF;
 }
 
-.polling-cards .cardGrid-desc {
+.grid-cards .cardGrid-desc {
   text-align: center;
   overflow: hidden;
   font-family: 'Lato', sans-serif;
@@ -118,7 +112,7 @@
   margin: 7px auto 0 auto;
 }
 
-.polling-cards .cardGrid-date {
+.grid-cards .cardGrid-date {
   margin: 12px 36px 12px auto;
   font-family: Lato;
   font-size: 12px;
@@ -132,7 +126,6 @@
 .list-cards {
   overflow-x: visible;
   overflow-y: visible;
-  position: relative;
 }
 
 .list-cards .cardList {
@@ -241,49 +234,39 @@
           transform: translateY(-100%);
 }
 
-.list-cards .gaugeBar, .polling-cards .gaugeBar {
+.polling-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  height: 36px;
+  height: auto;
+  position: relative;
 }
 
-.list-cards .gaugeBar-up, .polling-cards .gaugeBar-up {
-  width: 20%;
-  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
-  background-color: rgba(60, 187, 180, 0.6);
+.polling-cards .thumbUp {
+  background-color: rgba(60, 187, 180, 0.8);
 }
 
-.list-cards .gaugeBar-up div.thumbButton, .polling-cards .gaugeBar-up div.thumbButton {
-  background-color: transparent;
+.polling-cards .thumbDown {
+  background-color: #fbbd4a;
 }
 
-.list-cards .gaugeBar-down, .polling-cards .gaugeBar-down {
-  width: 80%;
-  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: rgba(249, 173, 29, 0.6);
+.polling-cards .thumbButton {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  text-align: center;
 }
 
-.list-cards .gaugeBar-down div.thumbButton, .polling-cards .gaugeBar-down div.thumbButton {
-  background-color: transparent;
+.polling-cards .thumbButton-icon {
+  position: relative;
+  width: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.list-cards .voting, .polling-cards .voting {
+.polling-cards .voting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,15 +284,15 @@
   width: 100%;
 }
 
-.list-cards .voting div:last-child, .polling-cards .voting div:last-child {
+.polling-cards .voting div:last-child {
   margin-right: 34px;
 }
 
-.list-cards .voting > div, .polling-cards .voting > div {
+.polling-cards .voting > div {
   margin-left: 12px;
 }
 
-.list-cards .voteNow, .polling-cards .voteNow {
+.polling-cards .voting .voteNow {
   width: 107px;
   height: 38px;
   font-family: Lato;
@@ -322,27 +305,46 @@
           box-sizing: border-box;
 }
 
-.list-cards .thumbUp, .polling-cards .thumbUp {
-  background-color: rgba(60, 187, 180, 0.8);
+.polling-cards .gaugeBar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 36px;
 }
 
-.list-cards .thumbDown, .polling-cards .thumbDown {
-  background-color: #fbbd4a;
+.polling-cards .gaugeBar-up {
+  width: 20%;
+  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
+  background-color: rgba(60, 187, 180, 0.6);
 }
 
-.list-cards .thumbButton, .polling-cards .thumbButton {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  text-align: center;
+.polling-cards .gaugeBar-up div.thumbButton {
+  background-color: transparent;
 }
 
-.list-cards .thumbButton-icon, .polling-cards .thumbButton-icon {
-  position: relative;
-  width: 16px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+.polling-cards .gaugeBar-down {
+  width: 80%;
+  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: rgba(249, 173, 29, 0.6);
+}
+
+.polling-cards .gaugeBar-down div.thumbButton {
+  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
@@ -357,7 +359,6 @@
             justify-content: space-between;
     justify-items: flex-start;
     overflow-x: visible;
-    overflow-y: hidden;
   }
   .polling-cards .cardGrid {
     width: 48%;
