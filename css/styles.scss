@@ -96,93 +96,6 @@
     }
 }
 
-.list-cards{    
-    overflow-x: visible;
-    overflow-y: visible;
-    .cardList{
-        overflow-y: hidden;
-        position: relative;
-        width: 100%;
-        //height: 142px;
-        height: 18.4vw;
-        color: #FFFFFF;
-        margin-bottom: 1em;
-        &-img{          
-            position: absolute;
-            width: 20.7%; 
-            top: -10px;
-        }
-        &-gradient{
-            position: relative;
-            height: 100%;
-            display: grid;
-            padding-right: 2%;
-            grid-template-columns: 71.6% auto;
-            grid-template-rows: 30px auto;
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 19.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
-        }
-        &-title{ 
-            margin-left: 28.9%;               
-            .listCard-thumb{
-                position: absolute;
-                left: 0px;
-            }
-            .name{
-                margin: 0;
-                color: #FFFFFF;
-            }
-            .thumbButton{
-
-            }
-        }
-        &-desc{          
-            overflow: hidden;  font-family: Lato;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 17px;
-            text-align: left;
-            margin: 1em 1em 0 28.9%;
-            box-sizing: border-box;
-            height: 34px;
-            grid-column: 1 / 2;
-        }
-        &-date{
-            padding-top: 1em;
-            font-family: Lato;
-            font-size: 12px;
-            font-weight: 700;
-            line-height: 14px;
-            text-align: right;
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-        }
-        .voting{
-            padding-top: 1em;
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            align-items: flex-start;
-            box-sizing: border-box;
-            div:last-child{
-                margin-top: 0;
-                margin-right: 0;
-            }      
-            .voteNow{
-                width: 50%;
-            }  
-        }
-        .voting > div{
-            margin-top: 4px;
-            margin-right: 5%;
-            margin-left: 0;
-        }
-        .gaugeBar{
-            position:absolute;
-            top: 100%;
-            transform: translateY(-100%);
-        }
-    }
-}
-
 .polling-cards{ 
     display: flex;
     width: 100%;
@@ -222,6 +135,15 @@
         & > div{
             margin-left: 12px;
         }
+        .thumbButton:hover{
+            box-shadow: 0px 0px 5px #FFFFFF;
+        }
+        .thumbButton:focus{
+            border: 2px solid #FFFFFF;
+        }
+        .thumbButton.bordered{
+            border: 2px solid #FFFFFF;
+        }
         
         .voteNow{
             width: 107px;
@@ -244,14 +166,12 @@
         &-up{            
             display: flex;
             align-items: center;
-            //width: 20%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
             background-color: rgba(60, 187, 180, 0.6);
             div.thumbButton{
                 background-color:transparent;
             }
         }
         &-down{
-            //width: 80%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
             display: flex;
             flex-flow: row nowrap;
             justify-content: flex-end;
@@ -269,6 +189,89 @@
 }
 
 @media screen and (min-width: 768px) {
+    .list-cards{    
+        overflow-x: visible;
+        overflow-y: visible;
+        .cardList{
+            overflow-y: hidden;
+            position: relative;
+            width: 100%;
+            height: 18.4vw;
+            color: #FFFFFF;
+            margin-bottom: 1em;
+            &-img{          
+                position: absolute;
+                width: 20.7%; 
+                top: -10px;
+            }
+            &-gradient{
+                position: relative;
+                height: 100%;
+                display: grid;
+                padding-right: 2%;
+                grid-template-columns: 71.6% auto;
+                grid-template-rows: 30px auto;
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 19.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
+            }
+            &-title{ 
+                margin-left: 28.9%;               
+                .listCard-thumb{
+                    position: absolute;
+                    left: 0px;
+                }
+                .name{
+                    margin: 0;
+                    color: #FFFFFF;
+                }
+            }
+            &-desc{          
+                overflow: hidden;  font-family: Lato;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+                text-align: left;
+                margin: 1em 1em 0 28.9%;
+                box-sizing: border-box;
+                height: 34px;
+                grid-column: 1 / 2;
+            }
+            &-date{
+                padding-top: 1em;
+                font-family: Lato;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 14px;
+                text-align: right;
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+            .voting{
+                padding-top: 1em;
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+                align-items: flex-start;
+                box-sizing: border-box;
+                div:last-child{
+                    margin-top: 0;
+                    margin-right: 0;
+                }      
+                .voteNow{
+                    width: 50%;
+                }  
+            }
+            .voting > div{
+                margin-top: 4px;
+                margin-right: 5%;
+                margin-left: 0;
+            }
+            .gaugeBar{
+                position:absolute;
+                top: 100%;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
     .previousRulings{
         .cardsView{
             display: inline-block;
@@ -280,9 +283,77 @@
         justify-items: flex-start;
         overflow-x: visible;
         .cardGrid{
-            width: 48%;
+            width: 48.5%;
             height: 45vw;
             margin-right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .polling-cards{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto ;
+        gap: 0.3em 1em;
+        .cardGrid{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            &-img{          
+                top: 0;
+                position: absolute;
+            }
+        }
+    }
+    .list-cards{    
+        .cardList{
+            grid-column: 1 / 4;
+            width: 100%;
+            &-img{          
+                width: 24%; 
+                top: -13%;
+            }
+            &-gradient{
+                grid-template-rows: 30% auto;
+             }
+            &-title{
+                .name{
+                    font-family: Lato;
+                    font-size: 36px;
+                    line-height: 63px;
+                }
+            }
+            &-desc{
+                font-size: 18px;
+                margin-top: 0;
+            }
+            &-date{
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            .voting{
+                position: relative;
+                padding: 0;
+                top: -15%;
+                div{
+                    margin-top: 0;
+                }
+                .voteNow{
+                    height: 45px;
+                }
+            }
+        }
+        .thumbButton{
+            width: 45px;
+            height: 45px;
+            &-icon{
+                width: 24px;
+            }
+        }
+        .gaugeBar{
+            height: 54px;
         }
     }
 }
