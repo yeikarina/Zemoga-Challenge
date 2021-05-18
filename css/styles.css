@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .previousRulings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -327,8 +326,12 @@
 }
 
 .polling-cards .gaugeBar-up {
-  width: 20%;
-  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(60, 187, 180, 0.6);
 }
 
@@ -337,8 +340,6 @@
 }
 
 .polling-cards .gaugeBar-down {
-  width: 80%;
-  /*---->Esto se debe quitar, se debe colocar dinámicamente*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,11 +350,18 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(249, 173, 29, 0.6);
 }
 
 .polling-cards .gaugeBar-down div.thumbButton {
   background-color: transparent;
+}
+
+.displayNone {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {

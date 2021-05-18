@@ -241,26 +241,31 @@
         display: flex;
         flex-flow: row nowrap;
         height: 36px;
-        &-up{
-            width: 20%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
+        &-up{            
+            display: flex;
+            align-items: center;
+            //width: 20%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
             background-color: rgba(60, 187, 180, 0.6);
             div.thumbButton{
                 background-color:transparent;
             }
         }
         &-down{
-            width: 80%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
+            //width: 80%;/*---->Esto se debe quitar, se debe colocar dinámicamente*/
             display: flex;
             flex-flow: row nowrap;
             justify-content: flex-end;
+            align-items: center;
             background-color: rgba(249, 173, 29, 0.6);
             div.thumbButton{
                 background-color:transparent;
             }
         }
-    }
+    }    
+}
 
-    
+.displayNone{
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
