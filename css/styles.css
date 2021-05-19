@@ -439,6 +439,7 @@
   }
   .list-cards .cardList .voting .voteNow {
     height: 45px;
+    font-size: 18px;
   }
   .list-cards .thumbButton {
     width: 45px;

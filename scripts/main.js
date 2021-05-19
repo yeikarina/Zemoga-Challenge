@@ -133,7 +133,7 @@ async function loadCards(celebrities) {
                 card.setAttribute("cardName", element.name);
                 const img = document.createElement("img");
                 img.classList.add("cardGrid-img");
-                img.src = "/assets/img/" + element.picture;
+                img.src = "assets/img/" + element.picture;
                 const gradient = document.createElement("div");
                 gradient.classList.add("cardGrid-gradient");
                 gradient.innerHTML = `<div class="cardGrid-title"><div class="thumbButton ` + thumbClass(element.votes.positive, element.votes.negative) + `">`
@@ -189,10 +189,10 @@ function thumbClass(positive, negative) {
 
 function thumbImg(positive, negative) {
     if (positive >= negative) {
-        return `<img src="/assets/img/thumbs-up.svg" alt="Thumb Up" class="thumbButton-icon">`;
+        return `<img src="assets/img/thumbs-up.svg" alt="Thumb Up" class="thumbButton-icon">`;
     }
     else {
-        return `<img src="/assets/img/thumbs-down.svg" alt="Thumb Down" class="thumbButton-icon">`;
+        return `<img src="assets/img/thumbs-down.svg" alt="Thumb Down" class="thumbButton-icon">`;
     }
 }
 
@@ -235,20 +235,20 @@ function dateText(lastUpdated, category) {
 
 function votingInnerHtml(cardName) {
     return `<div class="thumbButton thumbUp" cardName="` + cardName + `">
-            <img src="/assets/img/thumbs-up.svg" alt="Thumb Up" class="thumbButton-icon">
+            <img src="assets/img/thumbs-up.svg" alt="Thumb Up" class="thumbButton-icon">
             </div><div class="thumbButton thumbDown" cardName="` + cardName + `">
-            <img src="/assets/img/thumbs-down.svg" alt="Thumb Down" class="thumbButton-icon">
+            <img src="assets/img/thumbs-down.svg" alt="Thumb Down" class="thumbButton-icon">
             </div><div class="voteNow" cardName="` + cardName + `">Vote Now</div>`;
 }
 
 function gaugeBarInnerHtml(element) {
     const total = element.votes.positive + element.votes.negative;
     return `<div class="gaugeBar-up"><div class="thumbButton thumbUp">
-            <img src="/assets/img/thumbs-up.svg" alt="" class="thumbButton-icon"></div>            
+            <img src="assets/img/thumbs-up.svg" alt="" class="thumbButton-icon"></div>            
             <div class="percentage">` + percentage(total, element.votes.positive) + `%</div>
             </div><div class="gaugeBar-down"><div class="percentage">`
             + percentage(total, element.votes.negative) + `%</div><div class="thumbButton thumbDown">
-            <img src="/assets/img/thumbs-down.svg" alt="" class="thumbButton-icon"></div>
+            <img src="assets/img/thumbs-down.svg" alt="" class="thumbButton-icon"></div>
             </div>`;
 }
 
