@@ -32,11 +32,12 @@ Here you can see the acceptance criteria I tried to achieve 👩‍💻
 6. [X] **All posted votes should be persisted** by any means, and should be exactly the same count, even if the page is refreshed. Use _any_ persistance mechanisms you prefer: LocalStorage, Cookies, IndexedDB, URL params, a Back End service (Firebase, DynamoDB, Redis, etc). I used FireBase.
 
 ### Tools I used.
-For this challenge I used Vanilla framework (Only CSS, JS and HTML 🙈).
-I used a css preprocessor called Sass wich helped me coding faster and organized.
-I also worked with Mobile first approach and BEM methodology for my css classes names.
-My favorite IDE is Visual Studio Code, so I used it to develop, I installed Live Server and Live Sass Compiler to run while coding.
-You can see my web page running here on GutHub Pages.
+- For this challenge I used Vanilla framework (Only CSS, JS and HTML 🙈).
+- To organize the work and the tasks I used Kanban Board wich you can take a look [here](https://trello.com/b/HmMM8TRH/zemoga-challenge) 
+- I used a css preprocessor called Sass wich helped me coding faster and organized.
+- I also worked with Mobile first approach and BEM methodology for my css classes names.
+- My favorite IDE is Visual Studio Code, so I used it to develop, I installed Live Server and Live Sass Compiler to run while coding.
+- You can see my web page running here on GutHub Pages.
 
 ### Aditional 
 I had a lot of fun with this challenge, there is a lot of things I could've done better for sure but I am happy with the results and willing to learn a lot more.
